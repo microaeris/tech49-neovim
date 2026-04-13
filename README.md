@@ -25,14 +25,18 @@ If this theme is in a GitHub repo:
 
 ```lua
 return {
-  {
-    "microaeris/tech49.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme("tech49")
-    end,
-  },
+    {
+        "microaeris/tech49-neovim",
+        priority = 1000,
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = function()
+            vim.cmd.colorscheme("tech49_high_contrast")
+            end,
+        },
+    },
 }
 ```
 
